@@ -57,8 +57,7 @@ public class NumbersActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 
-//        GridView gridview = (GridView) findViewById(R.id.list);
-//        gridview.setAdapter(itemsAdapter);
+
 
 
     }
