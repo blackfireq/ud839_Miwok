@@ -25,10 +25,10 @@ import static android.R.interpolator.linear;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-        private int mColorResourceId;
+    private int mColorResourceId;
 
 
-    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId){
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
@@ -36,7 +36,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -60,11 +60,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.miwokImage);
 
-        if(currentWord.HasImage()) {
+        if (currentWord.HasImage()) {
             imageView.setImageResource(currentWord.getImageResourceId());
         } else {
             imageView.setVisibility(View.GONE);
         }
+
 
         // set background color
         final View textContainer = listItemView.findViewById(R.id.text_container);
@@ -73,10 +74,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         return listItemView;
 
     }
-
-
-
-
 
 
 }
