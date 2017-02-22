@@ -13,24 +13,34 @@
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
         android:src="@mipmap/ic_launcher" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/text_container"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/text_container"
-        android:orientation="vertical"
-        android:paddingLeft="16dp">
+            <TextView
+                android:id="@+id/miwok_text_view"
+                style="@style/TextViewDesign"
+                android:gravity="bottom"
+                android:textStyle="bold"
+                tools:text="lutti" />
 
-        <TextView
-            android:id="@+id/miwok_text_view"
-            style="@style/TextViewDesign"
-            android:gravity="bottom"
-            android:textStyle="bold"
-            tools:text="lutti" />
-
-        <TextView
-            android:id="@+id/default_text_view"
-            style="@style/TextViewDesign"
-            tools:text="one" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/default_text_view"
+                style="@style/TextViewDesign"
+                tools:text="one" />
+        </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_play_arrow_black_24dp"/>
+    </RelativeLayout>
 </LinearLayout>
